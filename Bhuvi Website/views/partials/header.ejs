@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhuvi Consultants</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+          <div class="logo-container">
+            <img src="images/logo.png" alt="logo" class="logo" />
+            <a href="/" class="logo-title">Bhuvi Consultants</a>
+          </div>
+          <div 
+            class="hamburger <%= isOpen ? 'open' : '' %>"
+            onclick="toggleMenu()">
+            <span class="line menu1"></span>
+            <span class="line menu2"></span>
+            <span class="line menu3"></span>
+          </div>
+          <div class="nav-menu <%= isOpen ? 'open' : '' %>">
+            <a href="/" class="nav-link <%= activePage === 'home' ? 'active' : '' %>">Home</a>
+            <a href="/about" class="nav-link <%= activePage === 'about' ? 'active' : '' %>">About</a>
+            <a href="/projects" class="nav-link <%= activePage === 'projects' ? 'active' : '' %>">Project</a>
+            <a href="/blogs" class="nav-link <%= activePage === 'blogs' ? 'active' : '' %>">Blog</a>
+            <a href="/contact" class="nav-link <%= activePage === 'contact' ? 'active' : '' %>">Contact</a>
+          </div>
+        </nav>
+      </header>      
+        <script>
+          let isOpen = false;
+          function toggleMenu() {
+            isOpen = !isOpen;
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+      
+            if (isOpen) {
+              hamburger.classList.add('open');
+              navMenu.classList.add('open');
+            } else {
+              hamburger.classList.remove('open');
+              navMenu.classList.remove('open');
+            }
+          }
+        </script>

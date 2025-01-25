@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Contact</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Add Me to Your Contact</h1>
+    <div class="center">
+        <button id="addContactBtn">Add Me 👍</button>
+    </div>
+
+    <script>
+        document.getElementById("addContactBtn").addEventListener("click", () => {
+            // Contact information
+            const contactInfo = {
+                name: "SShubham kumar",
+                phone: "9955589832",
+                email: "shubhamkrg1819@gmail.com",
+                address: "Ratu road, Ranchi, Jharkhand, India"
+            };
+
+            // VCF file content
+            const vcfContent = `
+BEGIN:VCARD
+VERSION:3.0
+FN:${contactInfo.name}
+TEL:${contactInfo.phone}
+EMAIL:${contactInfo.email}
+ADR:${contactInfo.address}
+END:VCARD
+`;
+
+            // Create a Blob from the VCF content
+            const blob = new Blob([vcfContent], { type: "text/vcard" });
+
+            // Create a temporary link element
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = `${contactInfo.name}.vcf`; // Set the filename
+            link.style.display = "none";
+
+            // Trigger the download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
+</body>
+
+</html>

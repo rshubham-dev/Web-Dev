@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@layer base {
+  html {
+    @apply text-gray-800;
+  } 
+}
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+    .max-w-md {
+      max-width: 100%;
+    }
+    .text-2xl {
+      font-size: 1.5rem;
+    }
+    .p-2 {
+      padding: 0.5rem;
+    }
+    .mt-5 {
+      margin-top: 1.25rem;
+    }
+  }
+  
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ebeae7;
+    color: #373636;
+    font-family: 'Poppins', sans-serif;
+    touch-action: manipulation;
+}
+
+.navbar {
+  box-shadow: rgba(121, 135, 151, 0.171) 1px 7px 30px 0px;
+}
+.nav-item,
+.navbar {
+  z-index: 10000;
+}
+@media  screen and (max-width:800px) {
+  .sidebar{
+    z-index: 100;
+  }
+  .navbar {
+    z-index: 10000;
+  }
+}
+
+.e-dlg-center-center, .e-quick-popup-wrapper.e-device{
+  z-index: 1000000 !important;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(216, 216, 216);
+  border-radius: 40px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+.max-h-0 {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.max-h-screen {
+  max-height: 500px; /* Adjust as needed */
+}
+
+.sidebar-container {
+  /* Add your existing styles */
+  overflow-y: auto; /* Enable scrolling */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+}
+
+.sidebar-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and other webkit browsers */
+}

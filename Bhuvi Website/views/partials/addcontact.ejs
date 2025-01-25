@@ -1,0 +1,38 @@
+<button onclick="handleAddContact()" class="py-2 px-4 bg-blue-500 text-white rounded-md">
+    Add to <i class="fa fa-address-book text-white ml-1"></i>
+</button>
+<script>
+    function handleAddContact() {
+        // Contact information
+        const contactInfo = {
+            name: "Bhuvi Consultants",
+            phone: "8986699600",
+            email: "bhuviconsultants@yahoo.in",
+            address: "Sri Guru Kripa, Near Shiv Mandir, Beside West End Residency, Kaju Bagan, Ranchi, Jharkhand 834003"
+        };
+
+        // VCF file content
+        const vcfContent = `
+      BEGIN:VCARD
+      VERSION:3.0
+      FN:${contactInfo.name}
+      TEL:${contactInfo.phone}
+      EMAIL:${contactInfo.email}
+      ADR:${contactInfo.address}
+      END:VCARD
+          `;
+
+        // Create a Blob from the VCF content
+        const blob = new Blob([vcfContent], { type: "text/vcard" });
+
+        // Create a temporary link element
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = `${contactInfo.name}.vcf`;
+        link.style.display = "none";
+
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>

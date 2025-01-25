@@ -1,0 +1,53 @@
+{
+	"name": "sales_admin",
+	"version": "0.1.0",
+	"private": true,
+	"homepage": "http://salesapp.benzyinfotech.com/",
+	"dependencies": {
+		"@material-ui/core": "^4.12.4",
+		"@material-ui/icons": "^4.11.3",
+		"autosuggest-highlight": "^3.1.1",
+		"axios": "^1.7.9",
+		"chart.js": "^2.8.0",
+		"chroma-js": "^2.0.6",
+		"downshift": "^3.2.10",
+		"google-map-react": "^1.1.4",
+		"google-maps-react": "^2.0.2",
+		"immutability-helper": "^2.8.1",
+		"moment": "^2.22.2",
+		"react": "^16.6.3",
+		"react-autosuggest": "^9.4.3",
+		"react-chartjs-2": "^2.8.0",
+		"react-datepicker": "^2.9.6",
+		"react-dom": "^16.6.3",
+		"react-event-timeline": "^1.5.4",
+		"react-geocode": "^0.2.0",
+		"react-google-places-autocomplete": "^1.5.0",
+		"react-json-to-csv": "^1.0.4",
+		"react-redux": "^6.0.0",
+		"react-router-dom": "^4.2.2",
+		"react-scripts": "^5.0.1",
+		"react-select": "^3.0.4",
+		"react-swipeable-views": "^0.13.1",
+		"redux": "^4.0.1",
+		"redux-thunk": "^2.3.0"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	],
+	"devDependencies": {
+		"redux-devtools-extension": "^2.13.8"
+	}
+}

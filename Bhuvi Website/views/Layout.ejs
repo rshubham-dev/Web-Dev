@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhuvi Consultants</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <div class="flex flex-col min-h-screen bg-gray-100">
+        <!-- Header -->
+        <%- include('partials/header', { isOpen, activePage }) %> <!-- Pass variables if needed -->
+
+            <!-- Content Section -->
+            <main class="flex-grow">
+                <%- include(page) %>
+                <%- include('partials/cta') %>
+            </main>
+                <!-- Footer -->
+                <%- include('partials/footer') %>
+
+                    <!-- Floating Buttons -->
+                    <div class="flex justify-between items-center w-full max-w-full fixed bottom-5 px-4">
+                        <!-- WhatsApp Button -->
+                        <%- include('partials/whatsapp') %>
+
+                            <!-- Chat Bot Button -->
+                            <div
+                                class="flex items-center justify-center w-fit h-fit bg-blue-500 text-white rounded-lg shadow-lg hover:bg-blue-600 transition text-md">
+                                <%- include('partials/addcontact') %>
+                            </div>
+                    </div>
+    </div>
+
+</body>
+
+</html>

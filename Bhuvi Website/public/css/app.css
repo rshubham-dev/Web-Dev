@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: #0b064b;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+  }
